@@ -10,6 +10,9 @@ body,html{
 }
 body{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     font-family:Georgia, 'Times New Roman', Times, serif;
     background-color: palevioletred;
 }
@@ -89,6 +92,32 @@ z-index: 4;
 .searchfield:hover{
     cursor:pointer;
 }
-.searchfield:focus::after{
+.searchfield:focus~.search{
+   right:-240px;
+   background-color: transparent;
+   z-index: 6;
 
+}
+.searchfield:focus~.search::before{
+    width:25px;
+    height:2px;
+    top: 28px;
+    left:15px;
+    bottom: 25px;
+
+}
+.searchfield:focus~.search::after{
+    width: 25px;
+    height: 2px;
+    top: 28px;
+    left:15px;
+    bottom: 25px;
+    rotate: -45deg;
+    border: none;
+    background-color: rgb(97, 6, 100) ;
+    border-radius: 0%;
+
+}
+.search:hover{
+    cursor: pointer;
 }
